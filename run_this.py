@@ -42,7 +42,7 @@ def set_rem_pro_time_tables(all_pro_job_time):
 
 if  __name__ =="__main__":
     #画图的数量40
-    for j in range(3):
+    for j in range(40):
         # 得到时间表
         m,n,time_tables = env.create_time_tables(j)
         # print(time_tables)
@@ -50,8 +50,8 @@ if  __name__ =="__main__":
         # RL = Linear_TD_lambda(alpha=0.002,gamma=0.05,my_lambda=0.1,m=m)
         # #实例化强化学习算法对象，多台机器的参数
         RL = Linear_TD_lambda(alpha=0.002, gamma=0.005, my_lambda=0.005, m=m)
-        #训练次数
-        train_times =2
+        #训练次数，我这里设的600
+        train_times =600
         #用于画图的横坐标
         run_num=[i+1 for i in range(train_times)]
         #用于画图的纵坐标
